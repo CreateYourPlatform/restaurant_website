@@ -1,0 +1,146 @@
+
+.dining-section {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 8%;
+  padding: 110px 9%;
+  background: #f0ece4;
+  color: #211e19;
+  overflow: hidden;
+}
+
+.dining-image {
+  height: 590px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.dining-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.dining-image:hover img {
+  transform: scale(1.05);
+}
+
+.dining-image-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  padding: 13px 16px;
+  background: rgba(15, 15, 15, 0.82);
+  color: #d4b477;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.dining-content {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+}
+
+.dining-visible .dining-image,
+.dining-visible .dining-content {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.dining-eyebrow {
+  color: #947442;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.dining-content h2 {
+  max-width: 470px;
+  font: 400 clamp(36px, 4vw, 57px)/1.12 Georgia, serif;
+  margin: 18px 0;
+}
+
+.dining-gold-line {
+  width: 65px;
+  height: 2px;
+  background: #b7985d;
+  margin: 25px 0;
+  transition: width 0.6s ease;
+}
+
+.dining-visible .dining-gold-line {
+  width: 105px;
+}
+
+.dining-content p {
+  color: #655f55;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.dining-features {
+  border-top: 1px solid #d5cfc3;
+  border-bottom: 1px solid #d5cfc3;
+  margin: 30px 0;
+}
+
+.dining-features div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid #ded8cd;
+  font-size: 13px;
+}
+
+.dining-features div:last-child {
+  border-bottom: 0;
+}
+
+.dining-number {
+  color: #a78a55;
+  font: 18px Georgia, serif;
+}
+
+.dining-story-link {
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  color: #322a1e;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-decoration: none;
+  border-bottom: 1px solid #b7985d;
+  padding-bottom: 10px;
+}
+
+.dining-story-link span {
+  color: #a78a55;
+  transition: transform 0.25s;
+}
+
+.dining-story-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+@media (max-width: 850px) {
+  .dining-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 75px 7%;
+  }
+
+  .dining-image { height: 430px; }
+}
+
+@media (max-width: 500px) {
+  .dining-section { padding: 60px 6%; }
+  .dining-image { height: 330px; }
+}

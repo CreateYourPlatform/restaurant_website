@@ -1,0 +1,205 @@
+/* ================================
+   LUXURY RESTAURANT NAVBAR
+================================ */
+
+.luxury-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: rgba(10, 10, 10, 0.94);
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.luxury-nav-inner {
+  max-width: 1400px;
+  height: 88px;
+  margin: auto;
+  padding: 0 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.luxury-logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-main {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: 6px;
+}
+
+.logo-sub {
+  margin-top: 4px;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #c9a45c;
+}
+
+/* Navigation */
+
+.luxury-links {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.luxury-links a {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+
+  font-size: 13px;
+  letter-spacing: 1.5px;
+
+  transition: color 0.3s ease;
+}
+
+.luxury-links a::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: #c9a45c;
+
+  transition: width 0.3s ease;
+}
+
+.luxury-links a:hover {
+  color: #fff;
+}
+
+.luxury-links a:hover::after {
+  width: 100%;
+}
+
+/* Reservation */
+
+.luxury-reservation {
+  padding: 13px 22px;
+
+  background: transparent;
+  border: 1px solid #c9a45c;
+
+  color: #c9a45c;
+
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.luxury-reservation:hover {
+  background: #c9a45c;
+  color: #111;
+}
+
+/* Mobile Button */
+
+.luxury-menu-button {
+  display: none;
+
+  background: none;
+  border: none;
+  color: white;
+
+  cursor: pointer;
+}
+
+.luxury-menu-button svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* Mobile Menu */
+
+.luxury-mobile {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+  .luxury-nav-inner {
+    height: 72px;
+    padding: 0 22px;
+  }
+
+  .luxury-links,
+  .luxury-reservation {
+    display: none;
+  }
+
+  .luxury-menu-button {
+    display: block;
+  }
+
+  .luxury-mobile {
+    display: flex;
+
+    max-height: 0;
+    overflow: hidden;
+
+    flex-direction: column;
+
+    padding: 0 25px;
+
+    background: #0a0a0a;
+
+    transition:
+      max-height 0.35s ease,
+      padding 0.35s ease;
+  }
+
+  .luxury-mobile.open {
+    max-height: 500px;
+    padding: 20px 25px 30px;
+  }
+
+  .luxury-mobile a {
+    padding: 15px 0;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .luxury-mobile button {
+    margin-top: 20px;
+    padding: 14px;
+
+    background: #c9a45c;
+    border: none;
+
+    color: #111;
+
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+}

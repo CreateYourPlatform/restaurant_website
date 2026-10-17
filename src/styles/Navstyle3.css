@@ -1,0 +1,170 @@
+
+/* ================================
+   MODERN EDITORIAL NAVBAR
+================================ */
+
+.editorial-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  background: #f7f5ef;
+
+  border-bottom: 1px solid #dedbd2;
+}
+
+.editorial-inner {
+  height: 92px;
+  max-width: 1500px;
+
+  margin: auto;
+  padding: 0 45px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* Menu */
+
+.editorial-menu {
+  justify-self: start;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  background: none;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+.editorial-menu svg {
+  width: 19px;
+}
+
+/* Logo */
+
+.editorial-logo {
+  text-decoration: none;
+
+  color: #171717;
+
+  font-family: Georgia, serif;
+  font-size: 34px;
+  letter-spacing: 5px;
+
+  text-align: center;
+}
+
+.editorial-logo span {
+  display: block;
+
+  margin-top: -3px;
+
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 5px;
+}
+
+/* Book */
+
+.editorial-book {
+  justify-self: end;
+
+  background: #171717;
+  color: white;
+
+  border: none;
+
+  padding: 14px 24px;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.editorial-book:hover {
+  background: #333;
+}
+
+/* Dropdown */
+
+.editorial-dropdown {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  height: 0;
+  overflow: hidden;
+
+  background: #f7f5ef;
+
+  transition: height 0.3s ease;
+}
+
+.editorial-dropdown.open {
+  height: 70px;
+  align-items: center;
+}
+
+.editorial-dropdown a {
+  color: #222;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  transition: opacity 0.2s;
+}
+
+.editorial-dropdown a:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+
+  .editorial-inner {
+    height: 72px;
+    padding: 0 18px;
+  }
+
+  .editorial-logo {
+    font-size: 24px;
+  }
+
+  .editorial-book {
+    padding: 11px 13px;
+    font-size: 8px;
+  }
+
+  .editorial-menu span {
+    display: none;
+  }
+
+  .editorial-dropdown {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .editorial-dropdown.open {
+    height: auto;
+    padding: 15px 25px;
+  }
+
+  .editorial-dropdown a {
+    padding: 13px 0;
+    border-bottom: 1px solid #ddd;
+  }
+}

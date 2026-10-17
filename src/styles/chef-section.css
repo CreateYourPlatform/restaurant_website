@@ -1,0 +1,176 @@
+
+.chef-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  background: #111;
+  color: #f5f0e8;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+/* IMAGE */
+
+.chef-image-container {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.chef-image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.9s ease;
+}
+
+.chef-image-container:hover img {
+  transform: scale(1.06);
+}
+
+.chef-image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 45px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    transparent 55%
+  );
+}
+
+.chef-image-overlay span {
+  color: #d4b477;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.chef-image-overlay h3 {
+  max-width: 350px;
+  margin: 10px 0 0;
+  font: 400 32px/1.2 Georgia, serif;
+}
+
+/* CONTENT */
+
+.chef-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 60px;
+}
+
+.chef-eyebrow {
+  color: #c6a568;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.chef-content h2 {
+  margin: 18px 0;
+  font: 400 clamp(38px, 4vw, 58px)/1.1 Georgia, serif;
+}
+
+.chef-line {
+  width: 70px;
+  height: 2px;
+  margin: 12px 0 28px;
+  background: #c6a568;
+}
+
+.chef-content p {
+  max-width: 520px;
+  color: #a9a39a;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 18px;
+}
+
+.chef-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 20px 0 32px;
+}
+
+.chef-name {
+  color: #eee7dc;
+  font: 400 20px Georgia, serif;
+  letter-spacing: 1px;
+}
+
+.chef-title {
+  color: #8e887e;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.chef-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  width: fit-content;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c6a568;
+  color: #d4b477;
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.chef-button span {
+  transition: transform 0.25s;
+}
+
+.chef-button:hover {
+  color: #f0d39a;
+}
+
+.chef-button:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .chef-section {
+    grid-template-columns: 1fr;
+  }
+
+  .chef-image-container {
+    min-height: 500px;
+  }
+
+  .chef-content {
+    padding: 60px 8%;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  .chef-image-container {
+    min-height: 420px;
+  }
+
+  .chef-image-overlay {
+    padding: 30px;
+  }
+
+  .chef-image-overlay h3 {
+    font-size: 27px;
+  }
+
+  .chef-content {
+    padding: 50px 7%;
+  }
+}

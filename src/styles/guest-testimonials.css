@@ -1,0 +1,145 @@
+
+.guest-section {
+  background: #151515;
+  color: #f5f0e8;
+  padding: 105px 6%;
+  text-align: center;
+  border-top: 1px solid #30291f;
+  border-bottom: 1px solid #30291f;
+}
+
+.guest-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.guest-eyebrow {
+  color: #c6a568;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.guest-inner h2 {
+  font: 400 clamp(32px, 4vw, 49px) Georgia, serif;
+  margin: 18px 0 40px;
+}
+
+.guest-review {
+  position: relative;
+  min-height: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 25px;
+  border-top: 1px solid #4a3c27;
+  border-bottom: 1px solid #4a3c27;
+}
+
+.guest-quote-mark {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 18px;
+  background: #151515;
+  color: #c6a568;
+  font: 65px/1 Georgia, serif;
+}
+
+.guest-review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: guest-fade 0.45s ease;
+}
+
+@keyframes guest-fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.guest-stars {
+  color: #c6a568;
+  z-index: 5;
+  font-size: 17px;
+  letter-spacing: 5px;
+  margin-bottom: 22px;
+}
+
+.guest-review blockquote {
+  max-width: 690px;
+  margin: 0 0 26px;
+  color: #e2dcd2;
+  font: 400 clamp(20px, 2.6vw, 29px)/1.65 Georgia, serif;
+}
+
+.guest-review-name {
+  color: #c6a568;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 9px;
+}
+
+.guest-review-occasion {
+  color: #928b80;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.guest-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 30px;
+}
+
+.guest-controls > button {
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: 1px solid #635035;
+  color: #c6a568;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.guest-controls > button:hover {
+  background: #c6a568;
+  color: #151515;
+}
+
+.guest-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.guest-dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #5e574c;
+  cursor: pointer;
+}
+
+.guest-dots button.active {
+  background: #c6a568;
+  transform: scale(1.4);
+}
+
+.guest-note {
+  margin-top: 32px;
+  color: #8d877d;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .guest-section { padding: 75px 6%; }
+  .guest-review { padding: 35px 8px; min-height: 300px; }
+  .guest-review blockquote { font-size: 21px; }
+  .guest-controls { gap: 20px; }
+}

@@ -1,0 +1,87 @@
+.floating-cta {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 23px;
+
+  border: 1px solid #f0d49a;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    110deg,
+    #171613 15%,
+    #45371f 35%,
+    #171613 50%,
+    #45371f 65%,
+    #171613 85%
+  );
+  background-size: 250% 100%;
+
+  color: #fff7e6;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+
+
+
+  animation:
+    ctaShimmer 9s linear infinite,
+    ctaFloat 3.5s ease-in-out infinite,
+    ctaGlow 5s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
+.floating-cta:hover {
+  transform: scale(1.07);
+
+}
+
+.cta-dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ffe3a3;
+
+  animation: dotPulse 0.5s ease-in-out infinite;
+}
+
+.cta-arrow {
+  font-size: 18px;
+  color: #ffe3a3;
+  transition: transform 0.3s ease;
+}
+
+.floating-cta:hover .cta-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Moving gold shine */
+@keyframes ctaShimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: -150% 50%;
+  }
+}
+
+/* Gentle floating movement */
+@keyframes ctaFloat {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -6px;
+  }
+}
+
+
+
+
