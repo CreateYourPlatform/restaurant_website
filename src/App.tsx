@@ -7,6 +7,7 @@ import GuestTestimonials from './components/GuestTestimonials';
 import ReservationFooter from './components/ReservationFooter';
 import ChefSection from './components/ChefSection';
 import FloatingCTA from './components/FloatingCTA';
+import Gallery from './components/Gallery';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <DiningExperience />
         <GuestTestimonials />
         <ChefSection />
+        <Gallery />
         <ReservationFooter />
       </main>
     </div>
